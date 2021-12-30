@@ -16,6 +16,9 @@
 </div>
 
 # <div align="center"> Drawing recognition using CNN and flask</div>
+<div align="center">
+<img src  ="https://github.com/Pradnya1208/Drawing-recognition-using-CNN-and-flask/blob/main/output/intro.jpeg?raw=true" width="100%">
+</div>
  
  
  
