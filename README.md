@@ -30,7 +30,7 @@ For the purpose of training and simplicity we are developing ths app for smaller
 
 We are using the data from the ‘Quick, draw!’ game where users need to draw as quickly as possible an arbitrary object.
 For the simplicity we are using the drawings of eye, arm, face, finger, hand, leg, mouth, nose, and ear.
-I focus my use case on p, Bat, Octopus and Camel, making the task a Multiclass Classification. 
+
 Here is a sample of the data :
 
 ![faces](https://github.com/Pradnya1208/Drawing-recognition-using-CNN-and-flask/blob/main/output/faces.PNG?raw=true)<br>
