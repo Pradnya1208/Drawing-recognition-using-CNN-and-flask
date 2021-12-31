@@ -40,8 +40,6 @@ We then normalize the values between 0 and 1 (X/255) as pixels of a grayscale im
 ## Implementation:
 
 **Libraries:** `Keras` `sklearn` `Matplotlib` `pandas` `seaborn` `NumPy` `flask` `pickle` `tensorflow`
-## A few glimpses of EDA:
-## Model Training and Evaluation:
 
 ### Model Architecture:
 
@@ -82,10 +80,10 @@ model_cnn.fit(X_train_cnn, y_train_cnn, validation_data=(X_test_cnn, y_test_cnn)
 # Final evaluation of the model
 scores = model_cnn.evaluate(X_test_cnn, y_test_cnn, verbose=0)
 print('Final CNN accuracy: ', scores[1])
-``
-``
+```
+```
 Final CNN accuracy:  0.9014999866485596
-``
+```
 
 ### Confusion Matrix:
 ![cm](https://github.com/Pradnya1208/Drawing-recognition-using-CNN-and-flask/blob/main/output/confusion%20matrix.PNG?raw=true)
@@ -96,9 +94,9 @@ Final CNN accuracy:  0.9014999866485596
 
 
 ## Saving the Model
-Now that our model is ready, we can embbed it into a Flask Web-App. To do so, it is more convenient to save (serialize) our model using pickle.
+Now that our model is ready, we can embed it into a Flask Web-App. To do so, it is more convenient to save (serialize) our model using pickle.
 
-While saving the model, I encountered with the "Model not picklable".<br>
+While saving the model, I encountered with the error `Model not picklable`.<br>
 following is the hotfix I used for this:
 [Reference](https://github.com/tensorflow/tensorflow/issues/34697)
 ```
@@ -145,7 +143,8 @@ with open('model_cnn.pkl', 'wb') as file:
 ```
 
 ## Developing the Drawing Web-App with Flask:
-### Flask: Flask is a web micro-framework written in Python. It allows you to design a solid and professional web application.
+### Flask:
+Flask is a web micro-framework written in Python. It allows you to design a solid and professional web application.
 
 #### app.py:
 Is the main code that will run our Flask application. It will contain the different routes for our application, respond to HTTP requests and decide what to display in the templates. In our case, it will also call our `CNN classifier`, operate pre-processing steps for our input data and make prediction.
@@ -197,7 +196,7 @@ if __name__ == '__main__':
     app.run(debug=False)
 ```
 ![result](https://github.com/Pradnya1208/Drawing-recognition-using-CNN-and-flask/blob/main/output/output_gif.gif?raw=true)
-### Lessons Learned
+## Lessons Learned
 
 `Convolutional Neural Network`
 `Image Processing`
@@ -206,12 +205,12 @@ if __name__ == '__main__':
 
 ## References:
 [Drawing recognition app](https://towardsdatascience.com/develop-an-interactive-drawing-recognition-app-based-on-cnn-deploy-it-with-flask-95a805de10c0)
-### Feedback
+## Feedback
 
 If you have any feedback, please reach out at pradnyapatil671@gmail.com
 
 
-### 🚀 About Me
+## 🚀 About Me
 #### Hi, I'm Pradnya! 👋
 I am an AI Enthusiast and  Data science & ML practitioner
 
